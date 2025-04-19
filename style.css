@@ -998,7 +998,7 @@ section:nth-child(odd) .animate.scroll,
 .certificates {
     padding: 50px 5%;
     background:var(--second-bg-color);
-    color: #fff;
+    
     text-align: center;
 }
 
