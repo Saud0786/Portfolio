@@ -58,5 +58,32 @@ function openModal(imgElement) {
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
+const toggleBtn = document.getElementById("theme-toggle");
+const sunIcon = document.getElementById("sun-icon");
+const moonIcon = document.getElementById("moon-icon");
+const body = document.body;
 
+function setTheme(theme) {
+  if (theme === "dark") {
+    body.classList.add("dark-mode");
+    sunIcon.style.display = "inline-block";
+    moonIcon.style.display = "none";
+  } else {
+    body.classList.remove("dark-mode");
+    sunIcon.style.display = "none";
+    moonIcon.style.display = "inline-block";
+  }
+  localStorage.setItem("theme", theme);
+}
 
+// Load saved theme
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  setTheme(savedTheme);
+});
+
+// Toggle on button click
+toggleBtn.addEventListener("click", () => {
+  const isDark = body.classList.contains("dark-mode");
+  setTheme(isDark ? "light" : "dark");
+});
