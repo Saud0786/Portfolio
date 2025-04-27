@@ -1183,9 +1183,28 @@ section:nth-child(odd) .animate.scroll,
       margin-bottom: 50px;
     }
   }
-  
+  /* @media  (max-width:300px) {
+    
+    .home-img-wrapper {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 50px;
+      }
+  } */
+  @media  (max-width:480px){
+    .home-img-wrapper {
+        width: 115px;
+        height: 115px;
+        /* margin-bottom: 50px; */
+      }
+      .home-sci a{
+            width: 30px;
+            height: 30px;  
+      }
+  }
 
 @media (max-width: 462px) {
+    
     .home-content h1 {
         font-size: 5.2rem;
     }
